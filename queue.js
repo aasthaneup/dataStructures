@@ -73,6 +73,31 @@ class SLQueue{
         }
     }
 }
+// Manipulations using queue:
+function interleaveQueue(queue){
+    var midpoint = Math.ceil(queue.size()/2)
+    // console.log("queue size = "+queue.size())
+    // console.log("midpoint = "+midpoint)
+    var queue_2 = new SLQueue();
+    for(var i = 1; i<=midpoint;i++){
+        dequeued_node = queue.dequeue();
+        queue_2.enqueue(dequeued_node);
+    }
+    var queue_3 = new SLQueue();
+    // console.log("size of queue and queue_2:")
+    // console.log(queue.size())
+    // console.log(queue_2.size())
+    for(var k = midpoint; k>0;k--){
+        queue_3.enqueue(queue_2.dequeue())
+        if(queue.size() !=0){
+            queue_3.enqueue(queue.dequeue());
+        }
+        else{
+            return queue_3;
+        }
+    }
+    return queue_3;
+}
 
 const queue = new SLQueue();
 queue.enqueue(22);
@@ -97,3 +122,9 @@ console.log("The queue contains the specified value:");
 console.log(queue.contains(9));
 console.log("The queue contains the specified value:");
 console.log(queue.contains(91));
+
+console.log("=======================")
+console.log("Interleaved Queue:");
+console.log("=======================")
+interleavened_queue = interleaveQueue(queue);
+interleavened_queue.printList();
