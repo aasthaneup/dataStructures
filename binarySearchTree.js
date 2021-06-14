@@ -106,21 +106,6 @@ class BST{
         }
     }
 
-// Robert's Solution:
-    // size() {
-    //     var s = this.subTreeSize(this.root);
-    //     console.log("Size = ", s);
-    //     return s;
-    // }
-    // subTreeSize(node) {
-    //     if (node == null) return 0;
-    //     var s = 1;
-    //     s += this.subTreeSize(node.left);
-    //     s += this.subTreeSize(node.right);
-    //     return s;
-    // }
-
-    // My solution (taken from Robert's):
     // Given a BST, determine the size (how many nodes there are)
     size() {
         // your code here
