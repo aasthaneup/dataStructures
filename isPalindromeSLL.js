@@ -23,20 +23,19 @@ class SLL{
         }
     }
 
-    // size(){
-    //     // your code here
-    //     var runner = this.head;
-    //     var listsize = 0;
-    //     if(runner!=null){
-    //         listsize = 1
-    //         while(runner.next != null){
-    //             listsize +=1;
-    //             runner = runner.next
-    //         }
-    //     }
-    //     console.log(listsize);
-    //     return listsize;
-    // }
+    size(){
+        var runner = this.head;
+        var listsize = 0;
+        if(runner!=null){
+            listsize = 1
+            while(runner.next != null){
+                listsize +=1;
+                runner = runner.next
+            }
+        }
+        console.log(listsize);
+        return listsize;
+    }
 
 // Return whether a list is a palindrome. For this, you can assume that the data stored in your SLL is entirely comprised of characters at each Node. Palindromes read the same front-to-back and back-to-front. Return true or false after comparing values.
 
