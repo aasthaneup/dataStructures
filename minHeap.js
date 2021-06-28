@@ -1,13 +1,5 @@
 //Heaps
 
-// Add to heap
-// Given a value, add it to the heap -- make sure the number ends up where it should go in the heap!
-// Ex: given insert(3) into a heap that already contains [null,2,4,7,5,6], you should return a heap like this: [null, 2,4,3,5,6,7]
-
-// Remove from heap
-// Remove the top value from a heap and reorder the heap so that it is in relative order
-// Ex: After running remove on a heap that contains [null,2,4,7,5,6], you should return a heap liike this: [null,3,4,7,5,6]
-
 class MinHeap {
     constructor(){
         // Initialize an "empty" heap
@@ -24,6 +16,12 @@ class MinHeap {
     printMe(){
         console.log(this.heap)
     }
+
+    // Add to heap
+    // Given a value, add it to the heap -- make sure the number ends up where it should go in the heap!
+    // Ex: given insert(3) into a heap that already contains [null,2,4,7,5,6], you should return a heap like this: [null, 2,4,3,5,6,7]
+
+
     insert(value){
         this.heap.push(value);
         // console.log("tem heap after push: "+this.heap)
@@ -42,6 +40,11 @@ class MinHeap {
         // console.log(this.heap);
         return this.heap;
     }
+    
+    // Remove the top value from a heap and reorder the heap so that it is in relative order
+    // Ex: After running remove on a heap that contains [null,2,4,7,5,6], you should return a heap liike this: [null,3,4,7,5,6]
+    // Remove from heap
+    
     remove(){
         // console.log("original heap length: "+this.heap.length)
         // let root = this.heap[1];
